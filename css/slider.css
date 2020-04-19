@@ -1,0 +1,14 @@
+#owl-demo .item{
+  margin: 3px;
+}
+#owl-demo .item img{
+	border-bottom-right-radius:50%;
+	border-top-left-radius:50%;;
+	display: block;
+        width: 100%;
+        height: auto;
+}
+#owl-demo{
+	
+	box-shadow: 0 2rem 2rem;
+}
