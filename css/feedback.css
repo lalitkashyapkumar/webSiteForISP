@@ -17,14 +17,14 @@ p{
 	}	
 
 .row{
-	clear:both;
 	max-width:114rem;
 	margin-bottom:8rem;
 }
 .feedback{
-	margin-bottom:80px;
+	margin-bottom:50px;
 	width: 75%;
 	margin:10vw auto;
+	margin-top: 0px;
 	box-shadow: 0 3rem 3rem;
 	border-radius:3px;
 	padding:3rem;

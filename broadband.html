@@ -84,70 +84,71 @@
       </div>
     
       <section id = "middle">	
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">		
+        <div class="flip-section">
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                  <div class="flip-card-front">		
                     <img src="img/nat-8.jpg" alt="Avatar" style="width:300px;height:200px;">
+                      <div class="card_details">
+                      <ul>
+                        <li>5 Mbps</li>
+                        <li>Unlimited</li>
+                        <li>Monthly Pack</li>
+                        <li>For All User</li>
+                      </ul>
+                      </div>
+                  </div>
+                  <div class="flip-card-back">
+                  <h1></h1> 
+                       <div class="text-box">
+                      <a id="cardbtn-book1" onclick="changeval('5 Mbps'), document.getElementById('idBook').style.display='block'" class="btn btn-white btn-animate">Book</a>
+                </div>  
+                  </div>
+              </div>
+          </div>
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/nat-5.jpg" alt="card" style="width:300px;height:200px;">
                     <div class="card_details">
-                    <ul>
-                      <li>5 Mbps</li>
-                      <li>Unlimited</li>
-                      <li>Monthly Pack</li>
-                      <li>For All User</li>
-                    </ul>
-                    </div>
+                      <ul>
+                        <li>10 Mbps</li>
+                        <li>Unlimited </li>
+                        <li>Monthly Pack</li>
+                        <li>For Gamer</li>
+                      </ul>
+                      </div>
                 </div>
                 <div class="flip-card-back">
-                  <h1></h1>
+                <h1></h1> 
                      <div class="text-box">
-                    <a onclick="changeval('5 Mbps'), document.getElementById('idBook').style.display='block'" class="btn btn-white btn-animate">Book</a>
-              </div>  
+                    <a id="cardbtn-book2" onclick="changeval('10 Mbps'), document.getElementById('idBook').style.display='block'" class="btn btn-white btn-animate">Book</a>
+                </div>  
                 </div>
-            </div>
+              </div>
+          </div>
+          <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/nat-9.jpg" alt="Avatar" style="width:300px;height:200px;">
+                    <div class="card_details">
+                      <ul>
+                        <li>20Mbps</li>
+                        <li>Unlimited</li>
+                        <li>Monthly Pack</li>
+                        <li>For Production</li>
+                      </ul>
+                      </div>
+                  </div>
+                <div class="flip-card-back">
+                    <h1></h1> 
+                     <div class="text-box">
+                    <a id="cardbtn-book3" onclick="changeval('20 Mbps'), document.getElementById('idBook').style.display='block'" class="btn btn-white btn-animate">Book</a>
+                </div>  
+                </div>
+              </div>
+          </div>
         </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                  <img src="img/nat-5.jpg" alt="card" style="width:300px;height:200px;">
-                  <div class="card_details">
-                    <ul>
-                      <li>10 Mbps</li>
-                      <li>Unlimited </li>
-                      <li>Monthly Pack</li>
-                      <li>For Gamer</li>
-                    </ul>
-                    </div>
-              </div>
-              <div class="flip-card-back">
-                <h1></h1>
-                   <div class="text-box">
-                    <a onclick="changeval('10 Mbps'), document.getElementById('idBook').style.display='block'" class="btn btn-white btn-animate">Book</a>
-              </div>  
-              </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                  <img src="img/nat-9.jpg" alt="Avatar" style="width:300px;height:200px;">
-                  <div class="card_details">
-                    <ul>
-                      <li>20Mbps</li>
-                      <li>Unlimited</li>
-                      <li>Monthly Pack</li>
-                      <li>For Gamer</li>
-                    </ul>
-                    </div>
-              </div>
-              <div class="flip-card-back">
-                <h1></h1>
-                   <div class="text-box">
-                    <a onclick="changeval('20 Mbps'), document.getElementById('idBook').style.display='block'" class="btn btn-white btn-animate">Book</a>
-              </div>  
-              </div>
-            </div>
-        </div>
-        <div style="clear:both;"></div>
         <div id="idBook" class="modal account">
   
           <form class="modal-content animate" action="">
@@ -261,26 +262,22 @@
               <table>
                 <tr>
                  <th>Home</th>
-                <th>Business</th> 
-                <th>Partner</th>
+                <th>Business</th>
                 <th>About Us</th>
               </tr>
               <tr>
                 <td><a href="amc.html"> AMC </a></td>
                 <td><a href="leasedline.html"> Internet Leased Line</a></td>
-                <td><a href="https://www.airtel.in/">Airtel</a></td>
                 <td><a href="aboutUs.html">Company Profile</a></td>
               </tr>
               <tr>
                 <td><a href="broadband.html">Broadband</a></td>
                 <td><a href="broadband.html">Wi-Fi </a></td>
-                <td><a href="https://citylinenetworks.com/">CityLine Network</a></td>
                 <td><a href="contactSupport.html">Contact US</a></td>
               </tr>
               <tr>
                 <td><a href="leasedline.html">Leased Line</a></td>
                 <td><a href="#something">IT Services</a></td>
-                <td><a href="https://www.tatacommunications.com/">Tata Telecom</a></td>
               </tr>
               <tr>
                 <td><a onclick="document.getElementById('idLogin').style.display='block', login()" style="cursor: pointer;">My Account</a></td>

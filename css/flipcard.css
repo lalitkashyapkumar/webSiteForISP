@@ -1,18 +1,23 @@
 #middle{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;  
-  padding-top:50px;
-  padding-left: 8.5vw;
+  
 	background-color:white;
 }
+.flip-section{
+display: flex;
+justify-content: center;
+}
 
+@media screen and (max-width: 700px) {
+  .reason, .flip-section {   
+    flex-direction: column;
+    align-items: center;
+  }
+}
  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
+    display: flex;
   	background-color: transparent;
   	border: 1px solid #f1f1f1;
-  	float:left;
   	border:none;
     margin-left:2.5%;
     margin-right: 2.5%;  
@@ -72,7 +77,7 @@ clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
 	width: 80%;
 	font-weight: 400;
 	line-height: 1.7;
-	color: #777;
+	color: white;
 	margin-left:10px;
 	
 } 

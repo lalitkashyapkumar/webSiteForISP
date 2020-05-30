@@ -1,24 +1,30 @@
+hr{
+	margin-top:-10px;
+	width:80%;
+	color:silver;
+}
 
 .footerContent{
 	box-shadow: 0 2rem 2rem;
 	background-color:#000;
-	height:20rem;
+	height:17rem;
+	margin-top: -30px;
 }
 .border h4{
 	padding-top:2rem;
 }
 .footerLink table{
 	width:100%;
-	padding-left:3rem;
+	padding-left:10vw;
 	padding-right:3rem;
 	margin-bottom:2rem;
 	font-size:1.2rem auto;
 	text-align:left;
 	color:#fff;	
+	table-layout: fixed;
 }
 .footerLink th{
 	font-size:1.5rem;
-
 }
 .copyright{
 	background-color:red;
@@ -28,6 +34,7 @@
 	text-align:center;
 }
 .footerLink a{
+	
 	text-decoration: none;
 	font-size:1.2rem auto;
 	color: #fff;

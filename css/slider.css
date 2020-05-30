@@ -19,6 +19,11 @@
 	color: white;
 	opacity: 0;
 	transition: 0.8s all ease-in;
+	font-size: 1.5vw;
+}
+.contentInSlider p{
+	font-size: 1.3vw;
+	line-height: 1.2vw;
 }
 .owl-item.active .contentInSlider{
 	transition: 0.8s all ease-in;
