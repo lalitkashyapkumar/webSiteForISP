@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+        Divine Computer: Broadband
+    </title>
+    <meta charset="utf-8">
+    <link href = "css/header.css" type = "text/css" rel = "stylesheet"/>
+    <link href = "css/footer.css" type = "text/css" rel = "stylesheet"/>
+    <link href = "css/login.css" type = "text/css" rel = "stylesheet"/>
+    <link href = "css/flipcard.css" type = "text/css" rel = "stylesheet"/>
+    <link href = "css/feedback.css" type = "text/css" rel = "stylesheet"/>
+
+    <link href = "css/booking.css" type = "text/css" rel = "stylesheet"/>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+	  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>
+    
+  </head>
+  <body>
+    <header id = "header">
+			<div class="topnav">
+		  	<a href="index.html">HOME</a>
+			  <a href="amc.html">AMC</a>
+  			<a class="active" href="broadband.html">BROADBAND</a>
+        <a href="leasedline.html">LEASED LINE</a>
+        <a onclick="document.getElementById('idLogin').style.display='block', login()" style="cursor: pointer;">MY ACCOUNT</a>
+  			<a href="aboutUs.html">ABOUT</a>
+			</div>
+			
+    </header>
+    <section id="booking">
+      <div class="bg-img" style="background-image: url(img/broadband.jpg);">
+        <form action="" class="bookContainer">
+          <h3>Requirement</h3>
+      
+          <label for="email"><b>Email</b></label>
+          <input id="l-email" type="text" placeholder="Enter Email" name="email" required>
+          
+          <label for="name"><b>Name</b></label>
+          <input id="l-name" type="text" placeholder="Enter Name" name="name" required>
+          
+          <label for="contactNumber"><b>Contact No.</b></label>
+          <input id="l-mobile" type="text" placeholder="Enter Mobile Number" name="contactNumber" required>
+          
+          <label for="address"><b>Address</b></label>
+          <input id="l-address" type="text" placeholder="Enter Your Address" name="address" required>
+      
+          <label><b>Data Required</b></label>
+          <select id="dataRequired" name="Data">
+            <option value="">--select--</option>
+            <option value="100">100 GB</option>
+            <option value="250">250 GB</option>
+            <option value="500">500 GB</option>
+            <option value="1000">1000 GB</option>
+          </select>
+          <label><b>Data Speed</b></label>
+          <select id="dataSpeed" name="speed">
+            <option value="">--select--</option>
+            <option value="10">10 Mbps</option>
+            <option value="100">100 Mbps</option>
+            <option value="500">500 Mbps</option>
+            <option value="1000">1000 Mbps</option>
+          </select>
+          <label><b>City</b></label>
+          <select id="city" name="cities">
+            <option value="">--select--</option>
+            <option value="Faridabad">Faridabad</option>
+            <option value="Gurugram">Gurugram</option>
+            <option value="Bhiwadi">Bhiwadi</option>
+          </select>
+          
+        
+          <button id="btn-broadband-book" type="button" class="btn">Submit</button>
+        </form>
+      </div>
+
+     
+    </section>
+    <div id = "content"><h4>
+      <span>Most popular plan </span></h4><hr></hr>
+      </div>
+    
+      <section id = "middle">	
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">		
+                    <img src="img/nat-8.jpg" alt="Avatar" style="width:300px;height:200px;">
+                    <div class="card_details">
+                    <ul>
+                      <li>5 Mbps</li>
+                      <li>Unlimited</li>
+                      <li>Monthly Pack</li>
+                      <li>For All User</li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                  <h1></h1>
+                     <div class="text-box">
+                    <a onclick="changeval('5 Mbps'), document.getElementById('idBook').style.display='block'" class="btn btn-white btn-animate">Book</a>
+              </div>  
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <img src="img/nat-5.jpg" alt="card" style="width:300px;height:200px;">
+                  <div class="card_details">
+                    <ul>
+                      <li>10 Mbps</li>
+                      <li>Unlimited </li>
+                      <li>Monthly Pack</li>
+                      <li>For Gamer</li>
+                    </ul>
+                    </div>
+              </div>
+              <div class="flip-card-back">
+                <h1></h1>
+                   <div class="text-box">
+                    <a onclick="changeval('10 Mbps'), document.getElementById('idBook').style.display='block'" class="btn btn-white btn-animate">Book</a>
+              </div>  
+              </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <img src="img/nat-9.jpg" alt="Avatar" style="width:300px;height:200px;">
+                  <div class="card_details">
+                    <ul>
+                      <li>20Mbps</li>
+                      <li>Unlimited</li>
+                      <li>Monthly Pack</li>
+                      <li>For Gamer</li>
+                    </ul>
+                    </div>
+              </div>
+              <div class="flip-card-back">
+                <h1></h1>
+                   <div class="text-box">
+                    <a onclick="changeval('20 Mbps'), document.getElementById('idBook').style.display='block'" class="btn btn-white btn-animate">Book</a>
+              </div>  
+              </div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+        <div id="idBook" class="modal account">
+  
+          <form class="modal-content animate" action="">
+          
+            <div class="container">
+            <h3>Requirement</h3>
+          
+            <label for="email"><b>Email</b></label>
+            <input id="b-email" type="text" placeholder="Enter Email" name="email" required>
+            
+            <label for="name"><b>Name</b></label>
+            <input id="b-name" type="text" placeholder="Enter Name" name="name" required>
+            
+            <label for="contactNumber"><b>Contact No.</b></label>
+            <input id="b-mobile" type="text" placeholder="Enter Mobile Number" name="contactNumber" required>
+            
+            <label for="address"><b>Address</b></label>
+            <input id="b-address" type="text" placeholder="Enter Your Address" name="address" required>
+          
+            <label><b>City</b></label>
+            <select id="city" name="cities">
+              <option value="">--select--</option>
+              <option value="Faridabad">Faridabad</option>
+              <option value="Gurugram">Gurugram</option>
+              <option value="Bhiwadi">Bhiwadi</option>
+              <option value="Noida">Noida</option>
+            </select>
+            <button id="btn-broadband-submit" type="button" class="btn">submit</button>
+             
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('idBook').style.display='none'" class="cancelbtn">Cancel</button>
+            
+            </div>
+          </form>
+          </div>	
+      </section>
+    <section id="consumer_feedback">
+    	<div id = "content"><h4>
+		<span>Our Expertize</span></h4><hr></hr>
+		</div>
+		
+		<div class="row">
+		<div class="feedback">
+			<figure class="feedback_shape">
+				<img class="feedback_img" src="img/nat-8.jpg" alt="person feedback">
+				<figcaption class="feedback_caption">Sagar</figcaption>
+			</figure>
+			<div class="feedback_text">
+			<h3>Expertize in Total IT Solutions</h3>
+			<p> Divine Telecom delivered Best internet services in Faridabad/Noida. Customer is our
+				 first superiority so we always bother of their demand also. We are basically into Internet & IT
+				  services. We offer genuine services for our Treasure customers at sustainable prices. 
+				  Our convincing services are AMC(Annual Maintaince Charges), Internet Lease Line, 
+				  Internet services for Home and Corporate user, VOIP, Web/ Domain Hosting, 
+				  Security & Surveillances,
+				 Network Managed System, Web Development services and Software Development services.</p>
+			</div>
+		</div>
+		</div>
+		
+		<div class="row">
+		<div class="feedback">
+			<figure class="feedback_shape">
+				<img class="feedback_img" src="img/nat-8.jpg" alt="person feedback">
+				<figcaption class="feedback_caption">Sagar</figcaption>
+			</figure>
+			<div class="feedback_text">
+			<h3>Wireless Connectivity</h3>
+			<p>Divine Telecom offers to clients high speed wireless internet access across Faridabad/Noida. 
+				Basically Divine Telecom is wireless internet service provider. Here by we just tell our clients
+				 how wireless makes their business life so easy to carry with 24x7 Support</p>
+			</div>
+		</div>
+		</div>
+    </section>
+
+
+    <div id="idLogin" class="modal account">
+  
+			<form class="modal-content animate" action="">
+		  
+			  <div class="container">
+				  <label><b>Username</b></label>
+				  <input id="email" type="text" placeholder="Enter Your Email" required>
+		  
+				  <label ></label><b>Password</b></label>
+				  <input id="password" type="password" placeholder="Enter Password" required>
+				  
+				  <button id="btn-login" type="button">Login</button>
+				  
+				  <span class="newUser" style="text-decoration: none; color: black;">
+					  <a href="signup.html">
+					  Not have an account signup
+					  </a>
+				  </span>
+			  </div>
+			  <div class="container" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('idLogin').style.display='none'" class="cancelbtn">Cancel</button>
+				<span class="psw">Forgot <a href="forgotPassword.html">password?</a></span>
+			  </div>
+			</form>
+		  </div>
+
+    <footer class="footer">
+      <div class="footerContent">
+        <div>
+          <div class="border">
+            <h4>Divine telecommunication</h4><hr></hr>
+            <div class="footerLink">
+              <table>
+                <tr>
+                 <th>Home</th>
+                <th>Business</th> 
+                <th>Partner</th>
+                <th>About Us</th>
+              </tr>
+              <tr>
+                <td><a href="amc.html"> AMC </a></td>
+                <td><a href="leasedline.html"> Internet Leased Line</a></td>
+                <td><a href="https://www.airtel.in/">Airtel</a></td>
+                <td><a href="aboutUs.html">Company Profile</a></td>
+              </tr>
+              <tr>
+                <td><a href="broadband.html">Broadband</a></td>
+                <td><a href="broadband.html">Wi-Fi </a></td>
+                <td><a href="https://citylinenetworks.com/">CityLine Network</a></td>
+                <td><a href="contactSupport.html">Contact US</a></td>
+              </tr>
+              <tr>
+                <td><a href="leasedline.html">Leased Line</a></td>
+                <td><a href="#something">IT Services</a></td>
+                <td><a href="https://www.tatacommunications.com/">Tata Telecom</a></td>
+              </tr>
+              <tr>
+                <td><a onclick="document.getElementById('idLogin').style.display='block', login()" style="cursor: pointer;">My Account</a></td>
+                
+              </tr>
+            
+            </table>
+            <hr></hr>
+          </div>
+        </div>		
+      </div>
+      
+    </div>
+    
+    <div class="copyright">
+    <p>Divine Telecommunication @ 2020 Divine Telecommunication All Rights Reserved
+    </p></div>
+  </footer>
+  <script src="javascript/jquery-3.5.1.min.js"></script>
+  <script src="javascript/index.js"></script>
+  <script>
+    var modal1 = document.getElementById('idLogin');
+	  var modal2 = document.getElementById('idBook');
+	  window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+		  }
+	  else if(event.target == modal2){
+		  modal2.style.display = "none";
+		  }
+	  }
+  </script>
+  </body>
+  </html>

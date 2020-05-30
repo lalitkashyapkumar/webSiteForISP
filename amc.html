@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Divine Telecom: Page not found
+        </title>
+        <meta charset="utf-8">
+        <link href = "css/header.css" type = "text/css" rel = "stylesheet"/>
+        <link href = "css/footer.css" type = "text/css" rel = "stylesheet"/>
+        <link href = "css/login.css" type = "text/css" rel = "stylesheet"/>
+
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+	      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+  	    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>
+
+    </head>
+    <body>
+        <header id = "header">
+			<div class="topnav">
+			<a href="index.html">HOME</a>
+			<a class="active" href="amc.html">AMC</a>
+  		    <a href="broadband.html">BROADBAND</a>
+            <a href="leasedline.html">LEASED LINE</a>
+            <a onclick="document.getElementById('idLogin').style.display='block', login()" style="cursor: pointer;">MY ACCOUNT</a>
+  		    <a href="aboutUs.html">ABOUT</a>
+			</div>
+			
+    </header>
+    
+    <h1 style="margin-top: 100px; margin-bottom: 50px;">We are Working on this it will be available as soon as possible</h1>
+
+
+
+    <div id="idLogin" class="modal account">
+  
+        <form class="modal-content animate" action="">
+      
+          <div class="container">
+              <label><b>Username</b></label>
+              <input id="email" type="text" placeholder="Enter Your Email" required>
+      
+              <label ></label><b>Password</b></label>
+              <input id="password" type="password" placeholder="Enter Password" required>
+              
+              <button id="btn-login" type="button">Login</button>
+              
+              <span class="newUser" style="text-decoration: none; color: black;">
+                  <a href="signup.html">
+                  Not have an account signup
+                  </a>
+              </span>
+          </div>
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('idLogin').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="forgotPassword.html">password?</a></span>
+          </div>
+        </form>
+      </div>
+      <footer class="footer">
+        <div class="footerContent">
+          <div>
+            <div class="border">
+              <h4>Divine telecommunication</h4><hr></hr>
+              <div class="footerLink">
+                <table>
+                  <tr>
+                   <th>Home</th>
+                  <th>Business</th> 
+                  <th>Partner</th>
+                  <th>About Us</th>
+                </tr>
+                <tr>
+                    <td><a href="amc.html"> AMC </a></td>
+                    <td><a href="leasedline.html"> Internet Leased Line</a></td>
+                    <td><a href="https://www.airtel.in/">Airtel</a></td>
+                    <td><a href="aboutUs.html">Company Profile</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="broadband.html">Broadband</a></td>
+                    <td><a href="broadband.html">Wi-Fi </a></td>
+                    <td><a href="https://citylinenetworks.com/">CityLine Network</a></td>
+                    <td><a href="contactSupport.html">Contact US</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="leasedline.html">Leased Line</a></td>
+                    <td><a href="#something">IT Services</a></td>
+                    <td><a href="https://www.tatacommunications.com/">Tata Telecom</a></td>
+                  </tr>
+                  <tr>
+                    <td><a onclick="document.getElementById('idLogin').style.display='block', login()" style="cursor: pointer;">My Account</a></td>
+                    
+                  </tr>
+              
+              </table>
+              <hr></hr>
+            </div>
+          </div>		
+        </div>
+        
+      </div>
+      
+      <div class="copyright">
+      <p>Divine Telecommunication @ 2020 Divine Telecommunication All Rights Reserved
+      </p></div>
+    </footer>
+
+    <script src="javascript/jquery-3.5.1.min.js"></script>
+    <script src="javascript/index.js"></script>
+    <script>
+  
+      var modal1 = document.getElementById('idLogin');
+        var modal2 = document.getElementById('idBook');
+        window.onclick = function(event) {
+      if (event.target == modal1) {
+          modal1.style.display = "none";
+            }
+        else if(event.target == modal2){
+            modal2.style.display = "none";
+            }
+        }
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            My Account
+        </title>
+        <meta charset="utf-8">
+        <link href = "css/header.css" type = "text/css" rel = "stylesheet"/>
+        <link href = "css/footer.css" type = "text/css" rel = "stylesheet"/>
+        <link href = "css/login.css" type = "text/css" rel = "stylesheet"/>
+        <link href = "css/home.css" type = "text/css" rel = "stylesheet"/>
+        
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+	      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+	      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+	      <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>
+    </head>
+    <body>
+        <header id = "header">
+			<div class="topnav">
+				<a href="index.html">HOME</a>
+				<a href="amc.html">AMC</a>
+  			<a href="broadband.html">BROADBAND</a>
+        <a href="leasedline.html">LEASED LINE</a>
+        <a class="active" href="home.html">MY ACCOUNT</a>
+        <a href="aboutUs.html">ABOUT</a>
+        <a id="btn-logout" style="cursor: pointer;">Logout</a>
+      </div>
+      
+
+
+      <section id="userSection">
+        <div id="backCover"> 
+          <img class="backImg" src="img/sample2.jpeg" alt="image1">
+        </div>
+        <div id="userProfile">
+            <div id="userPhoto">
+              <img id="userImg" src="" alt="image1">
+            </div>
+        </div>
+        <div id="userDetails">
+          <form id="userForm">
+            <h1 id="name">Divine Telecom</h1>
+            <label class="user-details-box" for="address"><b>Address:</b></label>
+            <label id="user-address" class="address"name="address"></label>
+            
+            <label class="user-details-box" for="name"><b>Name:</b></label>
+            <label id="user-name" class="address" name="name"></label>
+
+            <label class="user-details-box" for="contact"><b>Contact no.:</b></label>
+            <label id="user-contact" class="address" name="contact"></label>
+            
+            <label class="user-details-box" for="Payment"><b>Payment Due</b></label>
+            <label id="user-amount" class="address" name="payment"></label>
+
+            <button id="btn-pay" type="button" class="btn" onclick="document.getElementById('idPay').style.display='block'">Pay</button>
+
+            
+          </form>
+
+        </div>
+      </section>
+          <div id="idPay" class="modal account">
+  
+            <form class="modal-content animate" action="">
+                
+              <div class="container">
+              <h3>Requirement</h3>
+                  <label><b>Plese scan and pay fill your details we will update your payment status as soon as possible</b></label>
+                  <img class="pay-img"src="img/sample2.jpeg" alt="payImg">
+                  
+                  <div class="pay-details">
+                    <label for="mobile"><b>Mobile No.</b></label>
+                    <input id="p-phone" type="text" placeholder="Enter mobile that use to pay " name="mobile" required>
+                    
+                    <label for="name"><b>name</b></label>
+                    <input id="p-name" type="text" placeholder="Enter you account name" name="name" required>
+                    
+                    <label for="amount"><b>Amount</b></label>
+					          <input id="p-amount" type="text" placeholder="Enter amount you have payed" name="amount" required>
+                  </div>
+                  
+                  
+                  <button id="pay-real" type="button" onclick="document.getElementById('idPay').style.display='none'" class="btn">Okay</button>
+                  </div>
+                  
+                </form>
+                </div>	
+
+        <footer class="footer">
+        <div class="footerContent">
+            <div class="container">
+            <div class="border">
+                <h4>Divine telecommunication</h4><hr></hr>
+                <div class="footerLink">
+                    <table>
+                        <tr>
+                             <th>Home</th>
+                          <th>Business</th> 
+                          <th>Partner</th>
+                          <th>About Us</th>
+                        </tr>
+                        <tr>
+                          <td><a href="amc.html"> AMC </a></td>
+                          <td><a href="leasedline.html"> Internet Leased Line</a></td>
+                          <td><a href="https://www.airtel.in/">Airtel</a></td>
+                          <td><a href="aboutUs.html">Company Profile</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="broadband.html">Broadband</a></td>
+                          <td><a href="broadband.html">Wi-Fi </a></td>
+                          <td><a href="https://citylinenetworks.com/">CityLine Network</a></td>
+                          <td><a href="contactSupport.html">Contact US</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="leasedline.html">Leased Line</a></td>
+                          <td><a href="#something">IT Services</a></td>
+                          <td><a href="https://www.tatacommunications.com/">Tata Telecom</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="home.html">My Account</a></td>
+                          
+                        </tr>
+                      
+                      </table>
+                <hr></hr>
+            </div>
+            </div>		
+        </div>
+        
+        </div>
+        
+        <div class="copyright">
+        <p>Divine Telecommunication @ 2020 Divine Telecommunication All Rights Reserved
+        </p></div>
+    </footer>
+
+    <script src="javascript/jquery-3.5.1.min.js"></script>
+    <script src="javascript/index.js"></script>
+
+    <script>
+
+        firebase.auth().onAuthStateChanged(function(user){
+	        if(user){
+		        var userID = firebase.auth().currentUser.uid;
+		        firebase.database().ref('Users/' +userID).once('value').then(function(snapshot){
+			      if(snapshot.val()){
+              getUser(user.uid);  
+			      }
+			      else
+			      {
+			  	    window.location.href = "accountSettings.html";
+			      }
+		       });  
+		  
+		      }
+	        else{
+            window.location.href = "index.html";
+		      }
+	      });
+    </script>
+
+    </body>
+</html>

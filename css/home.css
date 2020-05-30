@@ -1,0 +1,65 @@
+#backCover img{
+    width: 90%;
+    margin-left:5%;
+    margin-right: 5%;
+    height: 30vw;
+}
+#userPhoto img{
+    width: 21vw;
+    height: 21vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius:50%;
+    margin-top: -12rem;
+}
+
+#userDetails #name{
+    text-align: center;
+    font-size:4vw;
+}
+#userForm{
+    width: 70%;
+    height: 45vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: palegoldenrod;
+}
+#userDetails label{
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size:1.5vw;
+    
+}
+.address{
+    width: 30vw;
+    height: 5vw;
+    
+}
+
+.user-details-box{
+    width: 12vw;
+    height: 5vw;
+    
+}
+.payBox{
+    width: 5vw;
+    height: 5vw;
+}
+#btn-pay{
+    background-color: red;
+    color: white;
+    padding: 1.8vw 20vw;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    opacity: 0.9;
+    
+}
+
+#btn-pay:hover {
+    opacity: 1;
+  }

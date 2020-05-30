@@ -1,0 +1,66 @@
+hr{
+	margin-top:-10px;
+	width:80%;
+	color:silver;
+}
+  .bg-img {
+    /* The image used */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 500px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 2rem 2rem;
+  }
+  
+  /* Add styles to the form bookContainer */
+  .bookContainer {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 400px;
+    padding: 16px;
+    background-color: white;
+  }
+  .bookContainer h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  
+  /* Full-width input fields */
+  #booking input, select{
+    width: 50%;
+    padding: 5px;
+    margin:10px;
+    border: none;
+    background: #f1f1f1;
+  }
+  #booking label {
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+  }​
+  #booking input[type=text]:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit button */
+  #booking .btn {
+    background-color: red;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  #booking .btn:hover {
+    opacity: 1;
+  }
