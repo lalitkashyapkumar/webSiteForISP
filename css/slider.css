@@ -5,13 +5,19 @@
 	border-bottom-right-radius:50%;
 	border-top-left-radius:50%;;
 	display: block;
+<<<<<<< HEAD
     width: 100%;
     height: auto;
+=======
+        width: 100%;
+        height: auto;
+>>>>>>> fecd569e1aea68bb31adc39372392f24d814a275
 }
 #owl-demo{
 	
 	box-shadow: 0 2rem 2rem;
 }
+<<<<<<< HEAD
 .contentInSlider{
     position: absolute;
     top: 40%;
@@ -24,3 +30,5 @@
 	transition: 0.8s all ease-in;
 	opacity: 1;
 }
+=======
+>>>>>>> fecd569e1aea68bb31adc39372392f24d814a275

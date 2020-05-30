@@ -21,6 +21,166 @@ CSS file for Index.html file
 	width:80%;
 	color:silver;
 }
+<<<<<<< HEAD
+=======
+#middle{
+	margin:50px;
+	padding:50px;
+	background-color:white;
+}
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  	background-color: transparent;
+  	border: 1px solid #f1f1f1;
+  	float:left;
+  	border:none;
+  	margin-left:60px;
+  	margin-bottom:50px;
+  	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width:300px;
+  height:500px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 2rem 2rem;
+  
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: silver;
+  color: black;
+  outline: 4px solid red;
+  outline-offset: -15px;
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front img{
+clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+}
+
+.card_details{
+	list-style: none;
+	width: 80%;
+	font-weight: 400;
+	line-height: 1.7;
+	color: #777;
+	margin-left:10px;
+	
+} 
+.card_details ul {
+	list-style: none;
+	
+}
+.card_details li{
+	text-align: center;
+	font-size: 1rem;
+	padding: 1rem;
+	border-bottom: 1px solid #eee;
+}
+
+.flip-card-back h1{
+	margin-top:200px;
+
+}
+.text-box {
+	
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+    margin-right:50px;
+    margin-left:50px;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+>>>>>>> fecd569e1aea68bb31adc39372392f24d814a275
 
 .row{
 	clear:both;
@@ -76,6 +236,7 @@ CSS file for Index.html file
 .row:hover .feedback_caption{
   	opacity:1;	
 }
+<<<<<<< HEAD
 
 
 .reason{
@@ -86,10 +247,19 @@ CSS file for Index.html file
 .group1{
 	
 	margin-left: 4vw;
+=======
+.reason{
+	width:90%;
+	font-size:1.2rem;
+	margin:0 auto;
+}
+.group1{
+>>>>>>> fecd569e1aea68bb31adc39372392f24d814a275
 	float:left;
 }
 
 .group2{
+<<<<<<< HEAD
 	margin-right: 4vw;
 	float:right;
 }
@@ -101,6 +271,17 @@ CSS file for Index.html file
 }
 
 
+=======
+	float:left;
+}
+.imgLabel {
+  position: relative;
+  width: 30rem;
+  margin:3rem;
+  box-shadow: 0 2rem 2rem;
+}
+
+>>>>>>> fecd569e1aea68bb31adc39372392f24d814a275
 .imgLabel img{
 	width:30rem;
 }
@@ -114,3 +295,43 @@ CSS file for Index.html file
   padding: 1rem; /* Some padding */
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+
+.footerContent{
+	box-shadow: 0 2rem 2rem;
+	background-color:#000;
+	height:20rem;
+}
+.border h4{
+	padding-top:2rem;
+}
+.footerLink table{
+	width:100%;
+	padding-left:3rem;
+	padding-right:3rem;
+	margin-bottom:2rem;
+	font-size:1.2rem auto;
+	text-align:left;
+	color:#fff;	
+}
+.footerLink th{
+	font-size:1.5rem;
+
+}
+.copyright{
+	background-color:red;
+	height:4rem;
+	font-size:1rem;
+	padding-top:1rem;
+	text-align:center;
+}
+.footerLink a{
+	text-decoration: none;
+	font-size:1.2rem auto;
+	color: #fff;
+}
+>>>>>>> fecd569e1aea68bb31adc39372392f24d814a275
